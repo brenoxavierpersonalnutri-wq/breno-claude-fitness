@@ -1,0 +1,46 @@
+# Manifesto do SQUAD — Breno Xavier
+# Lista tudo que existe no squad e como se conecta.
+
+squad:
+  nome: "Squad Breno Xavier — Consultoria Fitness"
+  versao: "0.1.0"
+  responsavel: "Breno Xavier"
+  posicionamento: "Consultoria online para mulheres 24-45 com foco em corpo definido"
+  idioma: pt-BR
+
+agentes:
+  - id: reavaliacao-postural
+    arquivo: agents/reavaliacao-postural.md
+    descricao: "Compara fotos antes/depois e gera relatório de reavaliação postural no modelo oficial."
+    usa_skills:
+      - avaliacao-postural
+    templates:
+      - templates/reavaliacao-postural.md
+    checklists:
+      - checklists/reavaliacao.md
+    workflows:
+      - workflows/fluxo-reavaliacao.md
+
+  - id: dieta-mensal
+    arquivo: agents/dieta-mensal.md
+    descricao: "Monta e atualiza dieta mensal da aluna respeitando princípios e fase de composição corporal."
+    usa_skills:
+      - dieta-mensal
+    templates:
+      - templates/dieta-mensal.md
+    checklists:
+      - checklists/dieta.md
+    workflows:
+      - workflows/fluxo-dieta-mensal.md
+
+core:
+  - core/metodologia.md          # Princípios gerais da consultoria
+  - core/fases-composicao.md     # Lógica: quando secar, quando ganhar
+  - core/dieta-principios.md     # Regras inegociáveis da dieta
+
+planejamento:
+  pendente:
+    - agente-treino
+    - agente-acompanhamento
+    - agente-captacao
+    - agente-anamnese  # substituir Google Forms

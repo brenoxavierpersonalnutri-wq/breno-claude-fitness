@@ -1,0 +1,57 @@
+# Parâmetros globais do squad.
+# Tudo que é "número da metodologia" vive aqui — os agentes leem daqui.
+
+marca:
+  profissional: "Breno Xavier"
+  titulo_linha_1: "Ed. Física / Nutrição"
+  titulo_linha_2: "Pós em Biomecânica · Pós em Bases Fisiológicas"
+  assinatura_rodape: "Consultoria online\nBRENO XAVIER\nEd. Física / Nutrição · Pós em Biomecânica · Pós em Bases Fisiológicas"
+
+publico_alvo:
+  genero: feminino
+  faixa_etaria: [24, 45]
+  objetivo_principal: "corpo definido"
+  objetivo_secundario: "perda de gordura (meio, não fim)"
+
+dieta:
+  # Princípios NÃO negociáveis (lidos em core/dieta-principios.md)
+  proximidade_alimentar_alvo_percent: [80, 100]  # quanto da dieta deve estar próxima do que a aluna já come
+  frequencia_atualizacao_dias: 30                # troca mensal para senso de novidade + ajuste
+
+  macros:
+    # CONFIRMAR COM BRENO antes de usar em produção.
+    # Valores placeholder baseados no que é comum em protocolos de definição feminina.
+    proteina_g_por_kg: [1.8, 2.2]
+    gordura_percent_vct: [20, 30]
+    carbo_percent_vct: [40, 55]  # o que sobra após prot + gordura
+
+  deficit_calorico:
+    leve_percent_vct: [10, 15]
+    moderado_percent_vct: [15, 20]
+    # "agressivo" evitado por padrão — impacta adesão
+
+  industrializados_aceitos:
+    - "Bebida 0 / refrigerante zero"
+    - "Energético 0"
+    - "Leite em pó desnatado"
+    - "Whey protein"
+    - "Gelatina diet / zero"
+    # (complete conforme o Breno alimentar)
+
+reavaliacao:
+  intervalo_sugerido_semanas: [8, 10]
+  graus_validos: [Normal, Leve, Alteração]
+  regioes_avaliadas:
+    - Cabeça / Cervical
+    - Ombros / Tórax
+    - Tórax / Dorsal
+    - Abdome
+    - Pelve / Lombar
+    - Quadril / Glúteos
+    - Joelhos
+    - Tornozelos / Pés
+  views_foto:
+    - Frontal
+    - Posterior
+    - Lateral D.
+    - Lateral E.

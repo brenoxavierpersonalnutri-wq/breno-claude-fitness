@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; width: 100%; height: 100%; overflow: hidden; }
+  svg { display: block; width: 100vw; height: 100vh; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Fundo preto com leve gradiente pra dar profundidade -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+
+    <!-- Dourado elegante (tipo joalheria) -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5d97a"/>
+      <stop offset="40%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+
+    <!-- Branco com leve tom quente -->
+    <linearGradient id="whiteGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f0e0"/>
+    </linearGradient>
+
+    <!-- Filtro de brilho sutil pro dourado -->
+    <filter id="goldGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo arredondado preto -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bgGrad)"/>
+
+  <!-- Brilho diagonal muito sutil (luxo discreto) -->
+  <path d="M 0 0 L 512 0 L 512 180 L 0 380 Z" fill="#ffffff" opacity="0.03"/>
+
+  <!-- Moldura dourada interna sutil -->
+  <rect x="24" y="24" width="464" height="464" rx="92" ry="92"
+        fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Círculo decorativo sutil atrás do monograma -->
+  <circle cx="256" cy="240" r="170" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.25"/>
+
+  <!-- Monograma B — branco elegante -->
+  <text x="180" y="355"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="320"
+        font-weight="900"
+        fill="url(#whiteGrad)"
+        letter-spacing="-10">B</text>
+
+  <!-- Monograma X sobreposto — dourado -->
+  <text x="340" y="370"
+        text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="255"
+        font-weight="900"
+        fill="url(#goldGrad)"
+        filter="url(#goldGlow)">X</text>
+
+  <!-- Linha dourada decorativa -->
+  <line x1="110" y1="410" x2="402" y2="410"
+        stroke="url(#goldGrad)" stroke-width="2" opacity="0.9"/>
+
+  <!-- Ornamentos nas pontas da linha -->
+  <circle cx="110" cy="410" r="3" fill="url(#goldGrad)"/>
+  <circle cx="402" cy="410" r="3" fill="url(#goldGrad)"/>
+
+  <!-- TIME BRENO XAVIER -->
+  <text x="256" y="452"
+        text-anchor="middle"
+        font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="24"
+        font-weight="700"
+        fill="url(#goldGrad)"
+        letter-spacing="6">TIME BRENO XAVIER</text>
+</svg>
+</body>
+</html>

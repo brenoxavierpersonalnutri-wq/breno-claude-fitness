@@ -1,0 +1,27 @@
+# Dados sensíveis de alunas — nunca versionar
+data/
+*.csv
+*.xlsx
+
+# Fotos
+*.jpg
+*.jpeg
+*.png
+*.heic
+
+# Saídas
+tasks/output/
+tasks/tmp/
+
+# Sistema
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+.idea/
+
+# Claude Code — config local da máquina (não versionar)
+.claude/settings.local.json
