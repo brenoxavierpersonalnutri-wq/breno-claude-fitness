@@ -110,6 +110,37 @@ Quando alguém pedir "monta a dieta da aluna X", o Claude SEMPRE:
 
 ---
 
+## Entrega da dieta — SEMPRE exibir TEXTO COMPLETO no chat
+
+O estagiário e o Breno trabalham 100% dentro do chat do Claude. **NÃO depender de download de arquivo, link pro GitHub, ou preview de PDF.**
+
+**Sempre fazer ao terminar uma dieta:**
+
+1. **Exibir a dieta inteira em texto markdown DIRETO NO CHAT**, formatada exatamente como vai aparecer no PDF final (cabeçalho, refeições, opções, observações, tabela de macros, rodapé)
+2. **Pronta pra copiar e colar** num Google Docs / Word — sem necessidade de baixar nada
+3. **Salvar também como `.md` e `.pdf`** em `data/<aluna>/` (backup/histórico no repo), mas SEM exigir que o usuário baixe
+4. **Mostrar resumo curto** no final: fase, VCT, macros totais
+5. **Avisar:** "Dieta acima pronta pra copiar. PDF/MD salvos em `data/<aluna>/` como backup."
+
+**Nunca fazer:**
+
+- ❌ Entregar SÓ um link pro arquivo (GitHub, blob, etc.) — o usuário fica preso ao GitHub
+- ❌ Forçar download de PDF como única forma de ver a dieta
+- ❌ Dizer "veja o PDF em `data/...`" sem exibir o conteúdo no chat
+- ❌ Truncar a dieta no chat ("...continua no arquivo") — exibe inteira mesmo que seja longa
+
+**Fluxo do estagiário com a dieta:**
+1. Lê a dieta no chat
+2. Revisa
+3. Copia tudo
+4. Cola num Google Docs com o template visual do Breno
+5. Exporta como PDF
+6. Manda pra aluna no WhatsApp
+
+GitHub é só backup/versionamento. **A entrega de verdade é o texto no chat.**
+
+---
+
 ## Agentes ativos
 
 - **`agents/dieta-mensal.md`** → monta/atualiza dieta mensal.
