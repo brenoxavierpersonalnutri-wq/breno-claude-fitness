@@ -6,6 +6,18 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8765"],
       "port": 8765
+    },
+    {
+      "name": "Funnel Friend Tool",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd /Users/brenoxavier/Desktop/funnel-friend-tool && /opt/homebrew/bin/bun run dev"],
+      "port": 8080
+    },
+    {
+      "name": "Deal Dolly Dashboard",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "cd /Users/brenoxavier/Desktop/deal-dolly-dashboard && bun run dev"],
+      "port": 8080
     }
   ]
 }
