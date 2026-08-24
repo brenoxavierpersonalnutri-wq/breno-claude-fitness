@@ -120,7 +120,7 @@ Quando alguém pedir "monta a dieta da aluna X", o Claude SEMPRE:
 
 ## Squad Turbo (marketing/lançamento) — separado da consultoria
 
-`squad-turbo/` guarda o Squad Turbo · LPSG 7.0 (43 skills + 13 agentes de
+`squad-turbo/` guarda o Squad Turbo · LPSG 7.2 (43 skills + 13 agentes de
 lançamento e tráfego, da Turbo Academy). É outro squad, com outro objetivo.
 
 **Não muda nada da consultoria.** Dieta, avaliação e metodologia continuam

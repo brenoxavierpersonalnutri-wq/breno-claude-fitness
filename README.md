@@ -16,7 +16,7 @@ Squad de agentes que replica a consultoria fitness do Breno Xavier, voltada para
 | `tasks/` | Tasks ativas / em andamento |
 | `config.yaml` | Parâmetros globais (macros default, fontes de dados) |
 | `squad.yaml` | Manifesto do squad (lista agentes, skills, workflows) |
-| `squad-turbo/` | Squad Turbo · LPSG 7.0 — marketing/lançamento, separado da consultoria (ver `squad-turbo/INSTALAR.md`) |
+| `squad-turbo/` | Squad Turbo · LPSG 7.2 — marketing/lançamento, separado da consultoria (ver `squad-turbo/INSTALAR.md`) |
 
 ## Agentes no ar
 

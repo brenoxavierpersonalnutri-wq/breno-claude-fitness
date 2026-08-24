@@ -1,4 +1,4 @@
-# Squad Turbo · LPSG 7.0
+# Squad Turbo · LPSG 7.2
 
 Squad de **lançamento e marketing** (método LPSG), da Turbo Academy.
 Vive neste repo lado a lado com o squad de consultoria fitness do Breno —
@@ -7,6 +7,18 @@ são coisas separadas. **Nada aqui altera `core/`, `agents/`, `skills/`,
 
 - Fonte oficial: <https://github.com/Turbo-Academy/squad-turbo-lpsg-7.0>
 - Manual do zero: <https://turbo-academy.github.io/squad-turbo-lpsg-7.0/instalacao-do-zero.html>
+
+## Versão instalada
+
+| | |
+|---|---|
+| Versão | **LPSG 7.2** |
+| Commit | `d77319b` — "Lições do incidente ManyChat entram no squad" |
+| Data | 2026-08-21 |
+| Ref | `main`, 1 commit à frente da tag `v7.2` |
+
+O `7.0` no nome do repositório é só o slug da URL — nunca foi renomeado. A
+versão real do conteúdo é a que o `README.md` do repo oficial declara: 7.2.
 
 ## O que já está aqui
 
