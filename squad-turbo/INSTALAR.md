@@ -21,9 +21,16 @@ Isso é o conteúdo que o instalador oficial (`instalar-squad.sh`, etapas 2–4)
 descompacta. Está versionado no repo, então acompanha o projeto em qualquer
 máquina ou sessão — não precisa reinstalar.
 
-## Ativar (1 comando)
+## Já está ativo
 
-Skills e agentes só carregam se estiverem em `.claude/`. Rode na raiz do repo:
+As 43 skills e os 13 agentes já foram copiados para `.claude/skills/` e
+`.claude/agents/`, que é de onde o Claude Code carrega. Está versionado —
+quem clonar o repo já pega o squad ativo, sem rodar nada.
+
+`squad-turbo/skills/` e `squad-turbo/agents/` guardam a cópia de origem,
+idêntica, para diff e re-ativação depois de atualizar do repo oficial.
+
+Se precisar re-ativar:
 
 ```bash
 mkdir -p .claude/skills .claude/agents
@@ -35,8 +42,8 @@ Para deixar disponível em **todos** os projetos, use `~/.claude/` no lugar de
 `.claude/` — é o destino padrão do instalador oficial, e é o caminho que os
 agentes referenciam internamente (`~/.claude/skills/...`).
 
-**Depois de copiar, abra uma sessão nova.** Skills e agentes não carregam na
-sessão que os instalou.
+**Abra uma sessão nova.** Skills e agentes não carregam na sessão que os
+instalou.
 
 Conferir:
 
