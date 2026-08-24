@@ -1,0 +1,78 @@
+# =============================================================================
+# crm-lpsg-turbo · config.example.yaml
+# Copie para config.yaml. Aqui mora tudo que muda por nicho — o código não muda.
+# =============================================================================
+
+projeto:
+  NOME_ESPECIALISTA: "{NOME_ESPECIALISTA}"
+  NICHO: "{NICHO}"
+  NOME_PRODUTO: "{NOME_PRODUTO_PRINCIPAL}"      # Ex: Acelerador Turbo
+  TICKET: "{TICKET_PRODUTO}"                    # Ex: R$ 25 mil
+
+# -----------------------------------------------------------------------------
+# SLAs — vêm do closer-lpsg-turbo. Mudar aqui muda o relógio da fila.
+# -----------------------------------------------------------------------------
+slas:
+  p1_checkout_iniciado_min: 30      # minutos
+  p2_hot_completo: "D+1 até 19h"
+  p3_hot_parcial: "D+1 manhã"
+  p4_warm_engajado: "D+2"
+  p5_resto: "D+3+"
+
+# -----------------------------------------------------------------------------
+# Travas do método — o banco já as aplica. Aqui é só o que a interface exibe.
+# -----------------------------------------------------------------------------
+travas:
+  aberturas_por_lead: 1
+  follow_ups_max: 2
+  sai_da_fila_apos_sem_resposta: 2
+
+# -----------------------------------------------------------------------------
+# Scripts por tier
+#
+# GATE OBRIGATÓRIO: todo script aqui passa pelo @revisor-copy-turbo ANTES de
+# entrar. O CRM não escreve copy — ele só executa a que foi aprovada.
+#
+# Estrutura (closer-lpsg-turbo): abertura pessoal → pergunta de travamento →
+# resposta à objeção real → ponte → encerramento limpo.
+#
+# {{nome}} é substituído na hora de montar o link wa.me.
+# -----------------------------------------------------------------------------
+scripts:
+  p1_checkout_iniciado: |
+    Oi {{nome}}, tudo bem? Vi que você começou a inscrição e não finalizou.
+    Travou em quê?
+
+  hot: |
+    Oi {{nome}}, tudo bem? Vi que você ficou até o fim da aula de ontem.
+    O que ficou faltando pra você?
+
+  warm: |
+    Oi {{nome}}, tudo bem? Vi que você acompanhou as aulas da semana.
+    Ficou alguma dúvida sobre como funciona?
+
+  cold: |
+    Oi {{nome}}, tudo bem? Vi que você entrou no grupo essa semana.
+    Faz sentido pra você o que a gente mostrou?
+
+# -----------------------------------------------------------------------------
+# Objeções do nicho — preencha a partir do relatório real, não do genérico.
+# A matriz completa está em closer-lpsg-turbo.
+# -----------------------------------------------------------------------------
+objecoes:
+  preco:     "Parcelamento real + custo de não agir, com os números da própria ficha"
+  decisor:   "Call de 15 min com os dois + material resumido"
+  ceticismo: "Estudo de caso do perfil mais parecido com o lead"
+  momento:   "Carga horária real + acesso ao replay (se for verdade)"
+  adiamento: "Diferença real entre entrar agora e depois (bônus que não voltam, se for verdade)"
+
+# -----------------------------------------------------------------------------
+# Cronograma do CS — vem do cs-lpsg-turbo.
+# -----------------------------------------------------------------------------
+cs:
+  marcos: [D0, D1, D3, D7, D14, D30, D45, D60, D75, D90]
+  janelas_de_risco:
+    sem_primeiro_login_horas: 48
+    sem_vitoria_dias: 7
+    sumiu_do_grupo_dias: 7
+    nps_critico: 6
