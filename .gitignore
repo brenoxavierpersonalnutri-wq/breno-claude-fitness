@@ -19,6 +19,13 @@ tasks/tmp/
 .env.*
 !.env.example
 
+# Credenciais (Meta token, Hotmart HOTTOK, chaves de API) — NUNCA versionar
+_private/
+*.pem
+*.key
+credenciais*
+token*.txt
+
 # Editor
 .vscode/
 .idea/
