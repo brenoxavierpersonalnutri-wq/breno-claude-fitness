@@ -1,0 +1,16 @@
+{
+  "name": "breno-xavier",
+  "owner": {
+    "name": "Breno Xavier",
+    "url": "https://www.brenoxavier.com.br"
+  },
+  "description": "Squad de agentes da consultoria fitness do Breno Xavier — dieta mensal, dieta GLP-1 e reavaliacao postural, no metodo da consultoria.",
+  "plugins": [
+    {
+      "name": "squad-breno",
+      "source": "./",
+      "description": "Squad de agentes da consultoria fitness do Breno Xavier: dieta mensal, dieta GLP-1 (Mounjaro/Ozempic) e reavaliacao postural, seguindo a metodologia da consultoria.",
+      "category": "workflow"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "squad-breno",
+  "displayName": "Squad Breno Xavier — Consultoria Fitness",
+  "description": "Squad de agentes da consultoria fitness do Breno Xavier. Monta dieta mensal, dieta calibrada para GLP-1 (Mounjaro/Ozempic) e relatorio de reavaliacao postural, seguindo a metodologia consolidada da consultoria. Publico: mulheres 24-45 com objetivo de corpo definido. Idioma: pt-BR.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Breno Xavier",
+    "url": "https://www.brenoxavier.com.br"
+  },
+  "homepage": "https://www.brenoxavier.com.br",
+  "repository": "https://github.com/brenoxavierpersonalnutri-wq/breno-claude-fitness",
+  "keywords": ["nutricao", "fitness", "dieta", "consultoria", "pt-br"]
+}

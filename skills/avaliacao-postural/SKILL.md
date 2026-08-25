@@ -5,13 +5,18 @@ description: Gera relatórios de Avaliação e Reavaliação Postural em markdow
 
 # Skill: Avaliação Postural
 
+> **Caminhos:** todo caminho citado aqui (`core/`, `config.yaml`, `templates/`, `checklists/`) é relativo à **raiz do squad**. Instalado como plugin, a raiz é `${CLAUDE_PLUGIN_ROOT}` (ex: `${CLAUDE_PLUGIN_ROOT}/core/dieta-principios.md`). Com o repo aberto direto, a raiz é a pasta do projeto (ex: `core/dieta-principios.md`). Não achou num, tente o outro **antes** de seguir.
+>
+> **Nunca** monte a entrega sem ter lido os arquivos da seção "Dependências" no fim deste arquivo. As saídas por aluna (`data/<aluna>/...`) vão para a pasta de trabalho do usuário, nunca para dentro do plugin.
+
+
 Habilidade técnica acionada pelo **Agente de Reavaliação Postural** (`agents/reavaliacao-postural.md`).
 
 ## O que esta skill faz
 
 1. Recebe fotos da aluna + metadados (nome, datas, anamnese)
 2. Para cada região anatômica, analisa as views disponíveis e descreve o achado + classifica o grau
-3. Monta o relatório usando `../../templates/reavaliacao-postural.md`
+3. Monta o relatório usando `templates/reavaliacao-postural.md`
 4. Se houver fotos anteriores, gera coluna "Antes" e calcula coluna "Evolução"
 5. Salva o MD em `data/<aluna>/reavaliacao-YYYY-MM-DD.md`
 6. (Opcional) converte para PDF com mesmo layout do modelo oficial
