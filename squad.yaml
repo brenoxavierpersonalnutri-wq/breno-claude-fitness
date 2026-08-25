@@ -7,6 +7,9 @@ squad:
   responsavel: "Breno Xavier"
   posicionamento: "Consultoria online para mulheres 24-45 com foco em corpo definido"
   idioma: pt-BR
+  # Distribuido como plugin do Claude Code. Ver .claude-plugin/
+  plugin: squad-breno
+  marketplace: breno-xavier
 
 agentes:
   - id: reavaliacao-postural
@@ -33,10 +36,38 @@ agentes:
     workflows:
       - workflows/fluxo-dieta-mensal.md
 
+  - id: dieta-mounjaro-glp1
+    arquivo: agents/dieta-mounjaro-glp1.md
+    descricao: "Dieta para aluna em uso de análogo de GLP-1 (Mounjaro / Ozempic / Wegovy / Saxenda / Trulicity). Substitui dieta-mensal nesses casos."
+    usa_skills:
+      - dieta-mensal
+    templates:
+      - templates/dieta-mensal.md
+    checklists:
+      - checklists/dieta.md
+    knowledge_base:
+      - core/knowledge-base/mounjaro-glp1.md
+      - core/knowledge-base/proteina-distribuicao.md
+      - core/knowledge-base/gorduras-omega6.md
+
 core:
   - core/metodologia.md          # Princípios gerais da consultoria
   - core/fases-composicao.md     # Lógica: quando secar, quando ganhar
   - core/dieta-principios.md     # Regras inegociáveis da dieta
+  - core/formato-dieta.md        # Como a dieta tem que SAIR
+  - core/regras-veto-alimento.md # O que NÃO pode entrar
+  - core/repertorio-receitas.md  # Receitas validadas
+
+knowledge_base:
+  indice: core/knowledge-base/README.md
+  fichas:
+    - core/knowledge-base/proteina-distribuicao.md
+    - core/knowledge-base/metabolismo-carboidratos.md
+    - core/knowledge-base/gorduras-omega6.md
+    - core/knowledge-base/padroes-alimentares-saudaveis.md
+    - core/knowledge-base/obesidade-diabetes-t2.md
+    - core/knowledge-base/diabetes-tipo1.md
+    - core/knowledge-base/mounjaro-glp1.md
 
 planejamento:
   pendente:

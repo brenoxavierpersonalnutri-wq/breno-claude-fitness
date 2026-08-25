@@ -5,6 +5,11 @@ description: Monta dieta mensal individualizada para alunas da consultoria Breno
 
 # Skill: Dieta Mensal
 
+> **Caminhos:** todo caminho citado aqui (`core/`, `config.yaml`, `templates/`, `checklists/`) é relativo à **raiz do squad**. Instalado como plugin, a raiz é `${CLAUDE_PLUGIN_ROOT}` (ex: `${CLAUDE_PLUGIN_ROOT}/core/dieta-principios.md`). Com o repo aberto direto, a raiz é a pasta do projeto (ex: `core/dieta-principios.md`). Não achou num, tente o outro **antes** de seguir.
+>
+> **Nunca** monte a entrega sem ter lido os arquivos da seção "Dependências" no fim deste arquivo. As saídas por aluna (`data/<aluna>/...`) vão para a pasta de trabalho do usuário, nunca para dentro do plugin.
+
+
 Habilidade técnica acionada pelo **Agente de Dieta Mensal** (`agents/dieta-mensal.md`).
 
 ## O que esta skill faz
